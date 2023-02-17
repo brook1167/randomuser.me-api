@@ -9,8 +9,8 @@ url =  f'https://randomuser.me/api/?page=3&results={number_of_users}&gender={gen
 response = requests.get(url)
 
 data = response.json()
-for x in range(100):
-    userDetails = data['results'][x]
+for user in range(100):
+    userDetails = data['results'][user]
 
-    print(x+1, 'Name', userDetails['name']['first'],'Gender',userDetails['gender'],'Country',userDetails['location']['country'],'Email',userDetails['email'])
+    print(user+1, 'Name', userDetails['name']['first'],'Gender',userDetails['gender'],'Country',userDetails['location']['country'],'Email',userDetails['email'])
     print('--------------------------------------------------------------------------')
